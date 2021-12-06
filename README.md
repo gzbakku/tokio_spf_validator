@@ -1,7 +1,7 @@
-# letterman_dns
+# tokio_spf_validator
 
-these are dns functions for letterman smtp server and client, it curretly provides async spf validation with tokio.
-   
+this is a spf validator for smtp servers, it is based on tokio and use trust_dns_resolver for dns queires with default resolver, currently supported features are mx record validation,softfail,domain validation, ipv4 and ipv6 validation, cidr ipv4 and ipv6 validation and redirect support.
+
 ## sample code  
 
 ```rust 

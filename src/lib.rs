@@ -110,6 +110,10 @@ pub async fn check(
             }
         }
 
+        if records.len() == 0{
+            return Ok(SpfQueryResult::SoftFail);
+        }
+
         for record in records{
 
             let mut lookup:SpfLookup;
