@@ -6,7 +6,7 @@ these are dns functions for letterman smtp server and client, it curretly provid
 
 ```rust 
 
-use letterman_dns::{SpfConfig,spf};
+use tokio_spf_validator::{SpfConfig,validate};
 
 #[tokio::main]
 async fn main() {
@@ -20,7 +20,7 @@ async fn main() {
     }
 
     if true{
-        match spf::check(
+        match validate(
             &config,
             IpAddr::V4(Ipv4Addr::new(209,85,215,172)),
             // IpAddr::V6(Ipv6Addr::new(2404,6800,4000,0000,0001,0000,0000,0000)),

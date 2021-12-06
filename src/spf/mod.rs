@@ -9,6 +9,38 @@ pub enum SpfQueryResult{
     Pass,Fail,SoftFail
 }
 
+
+///this is exported as validate in lib
+/// 
+/// ```
+/// use letterman_dns::{SpfConfig,spf};
+/// use std::net::IpAddr;
+///
+/// #[tokio::main]
+/// async fn main() {
+///
+///     let config:SpfConfig;
+///     match SpfConfig::new(){
+///         Ok(v)=>{config = v;},
+///         Err(_)=>{
+///             return;
+///         }
+///     }
+///
+///     if true{
+///         match spf::check(
+///             &config,
+///             IpAddr::V4(Ipv4Addr::new(209,85,215,172)),
+///             &String::from("mail-pg1-f172.google.com"), 
+///             &String::from("gmail.com")
+///         ).await{
+///             Ok(_)=>{},
+///             Err(_)=>{}
+///         }
+///     }
+///
+/// }
+/// ```
 pub async fn check(
     config:&SpfConfig,
     ip:IpAddr,

@@ -3,7 +3,24 @@ use trust_dns_resolver::config::{ResolverConfig,ResolverOpts};
 use trust_dns_resolver::{AsyncResolver};
 use trust_dns_resolver::{TokioConnection,TokioConnectionProvider};
 
-
+///this is a config for validate function currently no user defined parameters are needed in future custom resolvers will be allowed to be passed in config.
+/// 
+/// ```
+/// use tokio_spf_validator::{SpfConfig,validate};
+///
+/// #[tokio::main]
+/// async fn main() {
+///
+///     let config:SpfConfig;
+///     match SpfConfig::new(){
+///         Ok(v)=>{config = v;},
+///         Err(_)=>{
+///             return;
+///         }
+///     }
+///
+/// }
+/// ```
 pub struct SpfConfig{
     pub resolver:AsyncResolver<TokioConnection,TokioConnectionProvider>,
     pub spf_regex:Regex,
