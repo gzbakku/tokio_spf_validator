@@ -10,7 +10,7 @@ repository = "https://github.com/gzbakku/tokio_spf_validator"
 readme = "README.md"
 keywords = ["spf","async","tokio","validate","spf validation"]
 categories = ["Email", "Parser implementations", "api-bindings","Asynchronous"]
-license-file = "GPL-3.0"
+license = "GPL-3.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
