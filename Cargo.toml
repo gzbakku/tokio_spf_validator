@@ -8,7 +8,7 @@ description = "this is a spf validation lib for smtp servers."
 homepage = "https://github.com/gzbakku/tokio_spf_validator"
 repository = "https://github.com/gzbakku/tokio_spf_validator"
 readme = "README.md"
-keywords = ["spf","async","tokio","validate","spf validation"]
+keywords = ["spf","async","tokio","validate","spf-validation"]
 categories = ["Email", "Parser implementations", "api-bindings","Asynchronous"]
 license = "GPL-3.0"
 
