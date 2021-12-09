@@ -21,6 +21,8 @@ use trust_dns_resolver::{TokioConnection,TokioConnectionProvider};
 ///
 /// }
 /// ```
+
+#[derive(Clone,Debug)]
 pub struct SpfConfig{
     pub resolver:AsyncResolver<TokioConnection,TokioConnectionProvider>,
     pub spf_regex:Regex,
@@ -32,6 +34,7 @@ pub struct SpfConfig{
     pub spf_mx_regex:Regex,
 }
 
+#[derive(Clone,Debug)]
 pub struct SpfLookup{
     pub ipv4s:Vec<String>,
     pub ipv6s:Vec<String>,

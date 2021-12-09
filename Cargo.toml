@@ -1,6 +1,6 @@
 [package]
 name = "tokio_spf_validator"
-version = "1.0.1"
+version = "1.0.2"
 authors = ["gzbakku <gzbakku@gmail.com>"]
 edition = "2018"
 
