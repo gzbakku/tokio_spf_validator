@@ -11,6 +11,7 @@ use config::SpfLookup;
 use workers::{lookup_spf,lookup_mx};
 
 ///Softfail is if +all flag is passed in spf txt dns record this should be accpted but marked as potential fruad.
+#[derive(Clone,Debug)]
 pub enum SpfQueryResult{
     Pass,Fail,SoftFail
 }
